@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripBudget - Plan & Track Your Trips</title>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="logo">TripBudget</div>
+        <nav class="nav-menu">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#pricing">Pricing</a>
+            <button class="btn btn-primary">Get Started</button>
+        </nav>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Plan Your Dream Trip,<br> <span class="highlight">Track Every Penny</span></h1>
+                <p>The all-in-one platform to organize your adventures and manage your travel budget effortlessly.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-secondary">Start Planning <i class="fas fa-arrow-right"></i></button>
+                    <button class="btn btn-ghost">Watch Demo</button>
+                </div>
+            </div>
+            <!-- Features Summary (Bottom of Hero Screenshot) -->
+            <div class="features-summary container">
+                <div class="feature-card">
+                    <i class="fas fa-map-marker-alt icon-blue"></i>
+                    <h3>Itinerary Builder</h3>
+                    <p>Create detailed travel plans</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-wallet icon-orange"></i>
+                    <h3>Budget Tracking</h3>
+                    <p>Monitor expenses in real-time</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-calendar-alt icon-purple"></i>
+                    <h3>Smart Planning</h3>
+                    <p>Optimize your travel schedule</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Feature List Section (Screenshot 2) -->
+        <section class="full-features-section" id="features">
+            <div class="container">
+                <h2 class="section-heading">Everything You Need for <span class="highlight-lg">Perfect Trips</span></h2>
+                <p class="section-subheading">Powerful features designed to make travel planning and budgeting effortless</p>
+
+                <!-- Top Row of Features -->
+                <div class="feature-cards-grid">
+                    <div class="feature-card large-icon">
+                        <i class="fas fa-calendar-check icon-purple-2"></i>
+                        <h3>Smart Itinerary</h3>
+                        <p>Build detailed day-by-day plans with activities, bookings, and reminders</p>
+                    </div>
+                    <div class="feature-card large-icon">
+                        <i class="fas fa-chart-line icon-orange-2"></i>
+                        <h3>Budget Management</h3>
+                        <p>Track expenses by category, set limits, and get alerts before overspending</p>
+                    </div>
+                    <div class="feature-card large-icon">
+                        <i class="fas fa-route icon-blue-2"></i>
+                        <h3>Route Planning</h3>
+                        <p>Optimize your travel routes and discover hidden gems along the way</p>
+                    </div>
+                </div>
+                
+                <!-- Bottom Row of Features (Analytics & Collaboration) -->
+                <div class="feature-cards-grid analytics-row">
+                    <div class="feature-card medium-icon">
+                        <i class="fas fa-chart-area icon-blue"></i>
+                        <h3>Analytics & Reports</h3>
+                        <p>Visualize spending patterns and get insights for future trips</p>
+                    </div>
+                    <div class="feature-card medium-icon">
+                        <i class="fas fa-shield-alt icon-orange"></i>
+                        <h3>Secure & Private</h3>
+                        <p>Your travel plans and financial data are encrypted and protected</p>
+                    </div>
+                    <div class="feature-card medium-icon">
+                        <i class="fas fa-user-friends icon-purple"></i>
+                        <h3>Collaborate</h3>
+                        <p>Share trip plans with travel companions and split expenses easily</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Preview Section (Trip Cards - Screenshots 3 & 4) -->
+        <section class="dashboard-preview">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2>Your Trips</h2>
+                    <button class="btn btn-secondary new-trip-btn">+ New Trip</button>
+                </div>
+                
+                <!-- Summary Stats (Animated) -->
+                <div class="summary-stats">
+                    <div class="stat-card">Active Trips <span class="stat-value">0</span></div>
+                    <div class="stat-card">Total Budget <span class="stat-value">$0</span></div>
+                    <div class="stat-card">Total Spent <span class="stat-value">$0</span></div>
+                </div>
+
+                <!-- Trip Cards Grid -->
+                <div class="trip-cards-grid">
+                    <!-- Example Trip Card 1: Paris, France -->
+                    <div class="trip-card" data-trip-id="paris">
+                        <!-- Placeholder Image (In a real app, use a real image URL) -->
+                        <div class="trip-image" style="background-image: url('https://placehold.co/300x180/161b22/FFFFFF?text=Paris');"></div>
+                        <div class="trip-info">
+                            <h4><i class="fas fa-map-marker-alt"></i> Paris, France</h4>
+                            <p class="trip-dates"><i class="fas fa-calendar-alt"></i> Jun 15, 2025 - Jun 22, 2025</p>
+                            <div class="budget-progress-container">
+                                <div class="budget-details">
+                                    <span>Budget Progress</span>
+                                    <span class="budget-spent">$1200 / $3000</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 40%; background: linear-gradient(90deg, #38BDF8, #1E40AF);"></div>
+                                </div>
+                                <span class="progress-text"><i class="fas fa-chart-line"></i> 40% of budget used</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Example Trip Card 2: Tokyo, Japan -->
+                    <div class="trip-card" data-trip-id="tokyo">
+                        <div class="trip-image" style="background-image: url('https://placehold.co/300x180/161b22/FFFFFF?text=Tokyo');"></div>
+                        <div class="trip-info">
+                            <h4><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</h4>
+                            <p class="trip-dates"><i class="fas fa-calendar-alt"></i> May 1, 2025 - May 10, 2025</p>
+                            <div class="budget-progress-container">
+                                <div class="budget-details">
+                                    <span>Budget Progress</span>
+                                    <span class="budget-spent">$3200 / $4500</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 71%; background: linear-gradient(90deg, #F97316, #B9582D);"></div>
+                                </div>
+                                <span class="progress-text"><i class="fas fa-chart-line"></i> 71% of budget used</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Example Trip Card 3: Bali, Indonesia (Over budget example) -->
+                    <div class="trip-card over-budget" data-trip-id="bali">
+                        <div class="trip-image" style="background-image: url('https://placehold.co/300x180/161b22/FFFFFF?text=Bali');"></div>
+                        <div class="trip-info">
+                            <h4><i class="fas fa-map-marker-alt"></i> Bali, Indonesia</h4>
+                            <p class="trip-dates"><i class="fas fa-calendar-alt"></i> Mar 10, 2025 - Mar 20, 2025</p>
+                            <div class="budget-progress-container">
+                                <div class="budget-details">
+                                    <span>Budget Progress</span>
+                                    <span class="budget-spent over-budget-text">$2100 / $2000</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <!-- Full width progress bar for over budget -->
+                                    <div class="progress-fill over-budget-fill" style="width: 100%;"></div> 
+                                </div>
+                                <span class="progress-text over-budget-text"><i class="fas fa-chart-line"></i> 105% of budget used</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid container">
+            <div class="footer-col-logo">
+                <div class="logo">TripBudget</div>
+                <p>Plan your perfect trip and manage your budget with ease. Your adventure starts here.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Integrations</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Status</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p>&copy; 2025 TripBudget. All rights reserved.</p>
+            <p>Made with <i class="fas fa-heart text-red"></i> for travelers worldwide</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
