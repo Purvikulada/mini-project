@@ -165,7 +165,7 @@ body {
 .highlight {
     background: var(--gradient-hero-text);
     
-    -webkit-text-fill-color: transparent;
+    
 }
 
 .hero p {
@@ -238,7 +238,7 @@ body {
 .highlight-lg {
     background: var(--gradient-perfect-trips);
     
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: white;
 }
 
 .feature-cards-grid {

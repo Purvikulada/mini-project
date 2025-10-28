@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing - TripBudget</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #0f111a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #bbb;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #8b5cf6;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #cccccc;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+    }
+
+    .card {
+      background-color: #1a1c2c;
+      border-radius: 16px;
+      padding: 40px 30px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px rgba(139, 92, 246, 0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: 700;
+      color: #8b5cf6;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 25px;
+      color: #cccccc;
+    }
+
+    .features li {
+      margin: 10px 0;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #8b5cf6;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #8b5cf6, #6366f1);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 900px) {
+      .pricing-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TripBudget</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="pricing.html" style="color:#8b5cf6;">Pricing</a>
+      <a href="get-started.html">Get Started</a>
+    </nav>
+  </header>
+
+  <h2>Choose Your Plan</h2>
+  <p>Find the perfect plan for your travel budgeting needs — from casual trips to professional planners.</p>
+
+  <div class="pricing-container">
+    <!-- Free Plan -->
+    <div class="card">
+      <h3>Free</h3>
+      <p class="price">₹0 / month</p>
+      <ul class="features">
+        <li>Up to 2 Active Trips</li>
+        <li>Basic Budget Tracking</li>
+        <li>Manual Expense Entry</li>
+        <li>Email Support</li>
+      </ul>
+      <a href="get-started.html" class="btn">Get Started</a>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="card" style="border: 2px solid #8b5cf6;">
+      <h3>Pro</h3>
+      <p class="price">₹499 / month</p>
+      <ul class="features">
+        <li>Unlimited Active Trips</li>
+        <li>Automatic Expense Tracking</li>
+        <li>Custom Categories</li>
+        <li>Priority Email Support</li>
+      </ul>
+      <a href="get-started.html" class="btn">Upgrade Now</a>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="card">
+      <h3>Premium</h3>
+      <p class="price">₹999 / month</p>
+      <ul class="features">
+        <li>Unlimited Trips + Shared Access</li>
+        <li>AI Expense Insights</li>
+        <li>Cloud Data Backup</li>
+        <li>24/7 Support</li>
+      </ul>
+      <a href="get-started.html" class="btn">Go Premium</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 TripBudget. All rights reserved.
+  </footer>
+</body>
+</html>
