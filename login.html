@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TripBudget | Login or Signup</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #0b0e17;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #121624;
+      padding: 40px;
+      border-radius: 16px;
+      width: 350px;
+      box-shadow: 0 0 20px rgba(80, 56, 200, 0.2);
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 10px;
+      color: #a78bfa;
+    }
+    p {
+      font-size: 14px;
+      color: #9ca3af;
+      margin-bottom: 25px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background: #1e2333;
+      color: white;
+    }
+    button {
+      width: 100%;
+      background: #6b5cff;
+      border: none;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #8b78ff;
+    }
+    .toggle {
+      margin-top: 15px;
+      color: #a78bfa;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .toggle:hover {
+      text-decoration: underline;
+    }
+    .home-link {
+      display: block;
+      margin-top: 20px;
+      color: #9ca3af;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .home-link:hover {
+      color: #a78bfa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="formTitle">Welcome Back 👋</h1>
+    <p id="formDesc">Login to your TripBudget account</p>
+    
+    <form id="authForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit" id="submitBtn">Login</button>
+    </form>
+
+    <div class="toggle" id="toggleForm">New user? Sign up here</div>
+    <a href="index.html" class="home-link">🏠 Return to Home</a>
+  </div>
+
+  <script>
+    const toggleForm = document.getElementById("toggleForm");
+    const formTitle = document.getElementById("formTitle");
+    const formDesc = document.getElementById("formDesc");
+    const submitBtn = document.getElementById("submitBtn");
+    const authForm = document.getElementById("authForm");
+
+    let isLogin = true;
+
+    toggleForm.onclick = () => {
+      isLogin = !isLogin;
+      if (isLogin) {
+        formTitle.innerText = "Welcome Back 👋";
+        formDesc.innerText = "Login to your TripBudget account";
+        submitBtn.innerText = "Login";
+        toggleForm.innerText = "New user? Sign up here";
+      } else {
+        formTitle.innerText = "Create Your Account 🚀";
+        formDesc.innerText = "Sign up to start tracking your trips";
+        submitBtn.innerText = "Sign Up";
+        toggleForm.innerText = "Already have an account? Login";
+      }
+    };
+
+    // Redirect to Dashboard on successful login/signup
+    authForm.onsubmit = (e) => {
+      e.preventDefault();
+      window.location.href = "trips.html"; // your dashboard page
+    };
+  </script>
+</body>
+</html>
