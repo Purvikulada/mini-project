@@ -97,47 +97,34 @@
   </div>
 
   <script>
-  const toggleForm = document.getElementById("toggleForm");
-  const formTitle = document.getElementById("formTitle");
-  const formDesc = document.getElementById("formDesc");
-  const submitBtn = document.getElementById("submitBtn");
-  const authForm = document.getElementById("authForm");
+    const toggleForm = document.getElementById("toggleForm");
+    const formTitle = document.getElementById("formTitle");
+    const formDesc = document.getElementById("formDesc");
+    const submitBtn = document.getElementById("submitBtn");
+    const authForm = document.getElementById("authForm");
 
-  let isLogin = true;
+    let isLogin = true;
 
-  toggleForm.onclick = () => {
-    isLogin = !isLogin;
-    if (isLogin) {
-      formTitle.innerText = "Welcome Back 👋";
-      formDesc.innerText = "Login to your TripBudget account";
-      submitBtn.innerText = "Login";
-      toggleForm.innerText = "New user? Sign up here";
-    } else {
-      formTitle.innerText = "Create Your Account 🚀";
-      formDesc.innerText = "Sign up to start tracking your trips";
-      submitBtn.innerText = "Sign Up";
-      toggleForm.innerText = "Already have an account? Login";
-    }
-  };
+    toggleForm.onclick = () => {
+      isLogin = !isLogin;
+      if (isLogin) {
+        formTitle.innerText = "Welcome Back 👋";
+        formDesc.innerText = "Login to your TripBudget account";
+        submitBtn.innerText = "Login";
+        toggleForm.innerText = "New user? Sign up here";
+      } else {
+        formTitle.innerText = "Create Your Account 🚀";
+        formDesc.innerText = "Sign up to start tracking your trips";
+        submitBtn.innerText = "Sign Up";
+        toggleForm.innerText = "Already have an account? Login";
+      }
+    };
 
-  // Store login info in localStorage
-  authForm.onsubmit = (e) => {
-    e.preventDefault();
-    const username = document.getElementById("username").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-
-    if (!username || !email || !password) {
-      alert("Please fill in all fields!");
-      return;
-    }
-
-    // Save login state
-    localStorage.setItem("tripUser", JSON.stringify({ username, email }));
-    alert(`Welcome, ${username}!`);
-    window.location.href = "newtrip.html";
-  };
- 
+    // Redirect to Dashboard on successful login/signup
+    authForm.onsubmit = (e) => {
+      e.preventDefault();
+      window.location.href = "trips.html"; // your dashboard page
+    };
   </script>
 </body>
 </html>
