@@ -19,7 +19,13 @@
             <a href="#features">Features</a>
             <a href="#how-it-works">How It Works</a>
             <a onclick="window.location.href='pricing.html'" href="#pricing">Pricing</a>
-            <button class="btn btn-primary" onclick="window.location.href='get-started.html'">Get Started</button>
+            <button class="btn btn-primary"  onclick="
+  if(localStorage.getItem('tripUser')){
+    window.location.href='newtrip.html';
+  } else {
+    window.location.href='login.html';
+  }
+" class="btn btn-primary">Get Started</button>
         </nav>
         <button class="menu-toggle"><i class="fas fa-bars"></i></button>
     </header>
