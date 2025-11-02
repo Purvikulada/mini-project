@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- New: Number Counting Animation ---
     const stats = [
         { selector: '.stat-card:nth-child(1) span', endValue: 2, duration: 1000, prefix: '' },
-        { selector: '.stat-card:nth-child(2) span', endValue: 9500, duration: 2000, prefix: '$' },
-        { selector: '.stat-card:nth-child(3) span', endValue: 6500, duration: 2000, prefix: '$' }
+        { selector: '.stat-card:nth-child(2) span', endValue: 7500, duration: 2000, prefix: '₹' },
+        { selector: '.stat-card:nth-child(3) span', endValue: 6500, duration: 2000, prefix: '₹' }
     ];
 
     const animateCount = (element, endValue, duration, prefix) => {
