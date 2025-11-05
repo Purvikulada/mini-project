@@ -1,6 +1,11 @@
 from django.db import models
+from django.conf import settings # Import settings
 
 class Trip(models.Model):
+    # Link the trip to the user who created it
+    # Use settings.AUTH_USER_MODEL for the recommended way to reference the User model
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='trips') 
+    
     # User Input Fields
     location = models.CharField(max_length=255)
     duration_days = models.IntegerField()
@@ -14,4 +19,4 @@ class Trip(models.Model):
     actual_expenses = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
     def __str__(self):
-        return f"Plan for {self.location} | Budget: ${self.user_budget}"
+        return f"Plan for {self.location} | User: {self.user.username} | Budget: ${self.user_budget}"
