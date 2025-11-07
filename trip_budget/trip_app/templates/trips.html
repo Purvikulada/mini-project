@@ -177,7 +177,6 @@
   <h1>TripBudget</h1>
   <div>
     <button id="homeBtn">🏠 Home</button>
-    <button id="logoutBtn">🚪 Logout</button>
     <button id="newTripBtn">+ New Trip</button>
   </div>
 </header>
@@ -244,26 +243,7 @@
     </div>
   </div>
 
-  <script> 
-
-
-   // 🔒 Check login status
-  const user = JSON.parse(localStorage.getItem("tripUser"));
-  if (!user) {
-    alert("Please log in or sign up before accessing your trips.");
-    window.location.href = "login.html";
-  } else {
-    console.log(`Welcome back, ${user.username}!`);
-  }
-
-   // Logout logic
-  const logoutBtn = document.getElementById('logoutBtn');
-  logoutBtn.onclick = () => {
-    localStorage.removeItem('tripUser');
-    alert("You have been logged out.");
-    window.location.href = 'login.html';
-  };
-
+  <script>
     // Home button navigation
 const homeBtn = document.getElementById('homeBtn');
 homeBtn.onclick = () => {
